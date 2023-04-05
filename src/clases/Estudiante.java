@@ -1,6 +1,6 @@
 package clases;
 
-public class Estudiante {
+public class Estudiante extends Persona{
     //region Atributos
     protected String anoDeIngreso;
     protected double cuotaMensual;
@@ -8,7 +8,8 @@ public class Estudiante {
     //endregion
 
     //region Contructores
-    public Estudiante(String anoDeIngreso, double cuotaMensual, String carrera) {
+    public Estudiante(String DNI, String nombre, String apellido, String email, String direccion, String anoDeIngreso, double cuotaMensual, String carrera) {
+        super(DNI, nombre, apellido, email, direccion);
         this.anoDeIngreso = anoDeIngreso;
         this.cuotaMensual = cuotaMensual;
         this.carrera = carrera;
@@ -47,7 +48,7 @@ public class Estudiante {
                 "anoDeIngreso='" + anoDeIngreso + '\'' +
                 ", cuotaMensual=" + cuotaMensual +
                 ", carrera='" + carrera + '\'' +
-                '}';
+                "} " + super.toString();
     }
     //endregion
 }
