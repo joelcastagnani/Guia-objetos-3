@@ -1,13 +1,14 @@
 package clases;
 
-public class MiembroStaff {
+public class MiembroStaff extends Persona{
     //region Atributos
     protected double salario;
     protected String turno;
     //endregion
 
     //region Contructores
-    public MiembroStaff(double salario, String turno) {
+    public MiembroStaff(String DNI, String nombre, String apellido, String email, String direccion, double salario, String turno) {
+        super(DNI, nombre, apellido, email, direccion);
         this.salario = salario;
         this.turno = turno;
     }
@@ -37,7 +38,7 @@ public class MiembroStaff {
         return "MiembroStaff{" +
                 "salario=" + salario +
                 ", turno='" + turno + '\'' +
-                '}';
+                "} " + super.toString();
     }
     //endregion
 }
